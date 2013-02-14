@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/joe/vim_move'
+let g:netrw_dirhist_2='/home/joe/test'
+let g:netrw_dirhist_3='/home/joe/projects/pc/pimcore/models/Document'
+let g:netrw_dirhist_4='/home/joe/go/remote/src/github.com/BurntSushi/xgbutil/_examples/graceful-window-close'
+let g:netrw_dirhist_5='/home/joe/.config/wingo'

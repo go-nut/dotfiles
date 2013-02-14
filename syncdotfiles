@@ -1,0 +1,21 @@
+#!/bin/bash
+shopt -s nullglob dotglob extglob
+
+for file in ${HOME}/.dotfiles/@(.*);
+do
+ file="${file##*/}"
+ if [[ ! "$file" -ef "syncdotfiles" && ! -h "${HOME}/$file" ]] 
+ then
+   if [[ -e "${HOME}/$file" ]]
+   then
+     if [[ ! -e "${HOME}/.dotfiles_old" ]]
+     then
+       mkdir -p "${HOME}/.dotfiles_old"
+     fi
+     echo "Backing up existing $file";
+     mv "${HOME}/$file" "${HOME}/.dotfiles_old/$file"
+     echo "...done"
+   fi
+   ln -s "${HOME}/.dotfiles/$file" "${HOME}/$file"
+ fi
+done

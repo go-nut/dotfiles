@@ -1,0 +1,15 @@
+#!/bin/bash
+alias pacup='pacman -Syu'
+alias pacins='pacman -S'
+
+# modified commands
+alias diff='colordiff'              # requires colordiff package
+alias grep='grep --color=auto'
+alias mkdir='mkdir -p -v'
+alias ping='ping -c 5'
+
+alias du1='du --max-depth=1'
+alias openports='netstat --all --numeric --programs --inet --inet6'
+
+# ls
+alias ls='ls -hF --color=auto'
