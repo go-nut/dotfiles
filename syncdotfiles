@@ -4,7 +4,7 @@ shopt -s nullglob dotglob extglob
 for file in ${HOME}/.dotfiles/@(.*);
 do
  file="${file##*/}"
- if [[ ! "$file" -ef "syncdotfiles" && ! -h "${HOME}/$file" ]] 
+ if [[ ! "$file" -ef "syncdotfiles" && ! "$file" -ef ".git" && ! -h "${HOME}/$file" ]] 
  then
    if [[ -e "${HOME}/$file" ]]
    then
