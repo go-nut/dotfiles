@@ -8,10 +8,7 @@ do
  then
    if [[ -e "${HOME}/$file" ]]
    then
-     if [[ ! -e "${HOME}/.dotfiles_old" ]]
-     then
-       mkdir -p "${HOME}/.dotfiles_old"
-     fi
+     mkdir -p "${HOME}/.dotfiles_old" || exit
      echo "Backing up existing $file";
      mv "${HOME}/$file" "${HOME}/.dotfiles_old/$file"
      echo "...done"
