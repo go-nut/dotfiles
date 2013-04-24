@@ -2,7 +2,7 @@
 [[ $- = *i* ]] || return
 
 # git prompt script
-[[ -f /usr/share/git/git-prompt.sh ]] && . /usr/share/git/git-prompt.sh
+[[ -f ~/.git-prompt.sh ]] && . ~/.git-prompt.sh
 
 # go gets go to remote, but local projects still in path too
 export GOPATH=$HOME/go/remote:$HOME/go/local
